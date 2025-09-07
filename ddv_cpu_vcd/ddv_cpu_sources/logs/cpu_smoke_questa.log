@@ -1,0 +1,58 @@
+Reading pref.tcl
+
+# 10.4b
+
+# do scripts/run_cpu_smoke.do
+# Model Technology ModelSim SE-64 vmap 10.4b Lib Mapping Utility 2015.05 May 26 2015
+# vmap -modelsim_quiet work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 11:40:04 on Sep 05,2025
+# vlog -sv rtl/forward_unit.sv rtl/hazard_unit.sv rtl/cpu/alu.sv rtl/cpu/regfile.sv rtl/cpu/imm_gen.sv rtl/cpu/control.sv rtl/cpu/alu_control.sv rtl/cpu/branch_unit.sv rtl/cpu/if_id.sv rtl/cpu/id_ex.sv rtl/cpu/ex_mem.sv rtl/cpu/mem_wb.sv rtl/cpu/instr_mem.sv rtl/cpu/data_mem.sv rtl/riscv_cpu.sv tb/tb_cpu_smoke.sv 
+# -- Compiling module forward_unit
+# -- Compiling module hazard_unit
+# -- Compiling module alu
+# -- Compiling module regfile
+# -- Compiling module imm_gen
+# -- Compiling module control
+# -- Compiling module alu_control
+# -- Compiling module branch_unit
+# -- Compiling module if_id
+# -- Compiling module id_ex
+# -- Compiling module ex_mem
+# -- Compiling module mem_wb
+# -- Compiling module instr_mem
+# -- Compiling module data_mem
+# -- Compiling module riscv_cpu
+# -- Compiling module tb_cpu_smoke
+# 
+# Top level modules:
+# 	tb_cpu_smoke
+# End time: 11:40:18 on Sep 05,2025, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 0
+# vsim -c tb_cpu_smoke 
+# Start time: 11:40:18 on Sep 05,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 10.4b May 26 2015 Linux 3.10.0-1160.119.1.el7.x86_64
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_cpu_smoke(fast)
+# ** Error (suppressible): (vsim-3561) No objects found matching '*'.
+# [IMEM] Loading HEX file: mem/instr_mem.hex
+# ALL TESTS PASSED
+# ** Note: $finish    : tb/tb_cpu_smoke.sv(38)
+#    Time: 2045 ns  Iteration: 1  Instance: /tb_cpu_smoke
+# End time: 11:40:44 on Sep 05,2025, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 0

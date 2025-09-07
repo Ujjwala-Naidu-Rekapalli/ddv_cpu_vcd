@@ -1,0 +1,31 @@
+
+# macOS
+.DS_Store
+
+# ModelSim/Questa build artifacts
+transcript
+work/
+*_opt
+*.wlf
+_info/
+_vmake
+_lib*/
+*.qdb
+*.qpg
+*.qtl
+
+# Logs (keep only small curated samples)
+logs/*.log
+!logs/uvm_cpu_demo.vcd
+
+# MATLAB autosaves
+*.asv
+
+# Editor junk
+*.swp
+.idea/
+.vscode/
+
+# Zips
+*.zip
+

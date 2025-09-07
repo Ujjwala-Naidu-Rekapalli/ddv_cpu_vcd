@@ -1,0 +1,47 @@
+Reading pref.tcl
+
+# 10.4b
+
+# do scripts/run_hazard.do
+# Model Technology ModelSim SE-64 vmap 10.4b Lib Mapping Utility 2015.05 May 26 2015
+# vmap -modelsim_quiet work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 14:59:29 on Sep 04,2025
+# vlog -sv rtl/hazard_unit.sv tb/tb_hazard_unit.sv 
+# -- Compiling module hazard_unit
+# -- Compiling module tb_hazard_unit
+# 
+# Top level modules:
+# 	tb_hazard_unit
+# End time: 14:59:38 on Sep 04,2025, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+# vsim -c tb_hazard_unit 
+# Start time: 14:59:38 on Sep 04,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 10.4b May 26 2015 Linux 3.10.0-1160.119.1.el7.x86_64
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_hazard_unit(fast)
+# ** Error (suppressible): (vsim-3561) No objects found matching '*'.
+# [ OK ] no hazard: stall=0 pc_write=1 if_id_write=1 id_ex_flush=0
+# [ OK ] load-use RS1: stall=1 pc_write=0 if_id_write=0 id_ex_flush=1
+# [ OK ] load-use RS2: stall=1 pc_write=0 if_id_write=0 id_ex_flush=1
+# [ OK ] x0 ignored: stall=0 pc_write=1 if_id_write=1 id_ex_flush=0
+# ALL TESTS PASSED
+# ** Note: $finish    : tb/tb_hazard_unit.sv(50)
+#    Time: 4 ns  Iteration: 0  Instance: /tb_hazard_unit
+# End time: 15:00:01 on Sep 04,2025, Elapsed time: 0:00:23
+# Errors: 0, Warnings: 0

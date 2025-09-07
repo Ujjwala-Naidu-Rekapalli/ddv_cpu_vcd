@@ -1,0 +1,5 @@
+#!/bin/tcsh
+cd ~/ddv_cpu
+vsim -c -do scripts/run_cpu_smoke.do |& tee logs/cpu_smoke_questa.log
+tail -n 30 logs/cpu_smoke_questa.log
+
