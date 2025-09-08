@@ -6,7 +6,7 @@ This project implements a **5-stage RISC-V CPU** (IF → ID → EX → MEM → W
 - **UVM testbench** (SystemVerilog, ModelSim/Questa)
 - **MATLAB post-processing** to parse **VCD waveforms** and plot CPU activity
 
-✅ End-to-end flow: RTL → UVM simulation → VCD dump → MATLAB visualization
+End-to-end flow: RTL → UVM simulation → VCD dump → MATLAB visualization
 
 ---
 
