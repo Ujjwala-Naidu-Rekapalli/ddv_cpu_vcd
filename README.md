@@ -1,23 +1,39 @@
-# DDV CPU VCD Project (archive)
+# Pipelined RISC-V CPU with Hazards/Forwarding + UVM Testbench + MATLAB VCD Analysis
 
-## Contents
-- `matlab/cpu_vcd_tools/` — MATLAB VCD parsing/plotting utilities.
- - `vcd/uvm_cpu.vcd` — sample VCD.
-- `modelsim_logs/` — logs, WLF/VCD from ModelSim.
-- `ddv_cpu_sources/` — RTL, TBs, .do scripts (copied from server).
-- `run_uvm_cpu_vcd_targets.do` — capture script.
+This project implements a **5-stage RISC-V CPU** (IF → ID → EX → MEM → WB) with:
+- **Hazard detection unit** (load-use stall handling)
+- **Forwarding unit** (EX/MEM bypassing to avoid stalls)
+- **UVM testbench** (SystemVerilog, ModelSim/Questa)
+- **MATLAB post-processing** to parse **VCD waveforms** and plot CPU activity
 
-## Quick MATLAB usage
+✅ End-to-end flow: RTL → UVM simulation → VCD dump → MATLAB visualization
+
+---
+
+## Repository Layout
+rtl/ # CPU RTL: ALU, control, forwarding, hazard, pipeline regs
+tb/ # UVM testbench: interfaces, cpu_pkg, test sequences
+scripts/ # ModelSim .do scripts (run_uvm_cpu.do, run_uvm_cpu_vcd.do, etc.)
+mem/ # Sample instr_mem.hex for smoke tests
+matlab/ # VCD parsing + plotting utilities
+logs/ # Contains one small demo VCD (uvm_cpu_demo.vcd)
+docs/ # Block diagrams and MATLAB screenshots
+
+---
+
+## Quick Start
+
+### A) Run UVM Test in ModelSim/Questa
+From the repo root:
+```tcl
+vsim -c -do scripts/run_uvm_cpu_vcd.do
+
+## MATLAB quick look
+
 ```matlab
-addpath('~/Projects/ddv_cpu_vcd/matlab/cpu_vcd_tools');
-vcd = fullfile('~/Projects/ddv_cpu_vcd','vcd','uvm_cpu.vcd');
-vcd_quicklook(vcd);             % scalar + int’ized buses quick plot
-plot_pc_from_vcd_standalone(vcd); % PC plot if present
-
-
-### 3) Create a zip to submit/share
-```bash
-cd ~/Projects
-zip -r ddv_cpu_vcd_$(date +%Y%m%d).zip ddv_cpu_vcd
-
+restoredefaultpath; rehash toolboxcache;
+cd('~/Projects/ddv_cpu_vcd_repo');
+addpath('matlab/cpu_vcd_tools');
+vcd = fullfile(pwd,'logs','uvm_cpu_demo.vcd');
+plot_cpu_quick(vcd);
 
